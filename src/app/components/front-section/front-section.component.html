@@ -1,0 +1,42 @@
+<section>
+    <div class="container">
+    <ngb-carousel #carousel [interval]="3000" [pauseOnHover]="pauseOnHover" [showNavigationIndicators]="false" (slide)="onSlide($event)">
+        <ng-template ngbSlide>
+            <mat-card class="example-card slide-in-right slide-out-left">
+                <mat-card-content>
+                  <div class="row">
+                    <div class="col-5">
+                      <h2>Find your dream house</h2>
+                      <h3>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto eligendi possimus, repellendus laudantium pariatur provident. Quam suscipit non in beatae perferendis laboriosam natus quae, maiores eveniet? Illo, dicta delectus! Quam?
+                      </h3>
+                      <button mat-raised-button color="primary">Search Property Near You</button>
+                    </div>
+                    <div class="col-7">
+                      <img style="width: 100%;" src="../../../assets/images/backgrounds/4370476.jpg" alt="">
+                    </div>
+                  </div>
+                </mat-card-content>
+              </mat-card>
+        </ng-template>
+        <ng-template ngbSlide>
+          <mat-card class="example-card slide-in-right slide-out-left">
+              <mat-card-content>
+                <div class="row">
+                  <div class="col-5">
+                    <h2>Ease up documentation process</h2>
+                    <h3>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto eligendi possimus, repellendus laudantium pariatur provident. Quam suscipit non in beatae perferendis laboriosam natus quae, maiores eveniet? Illo, dicta delectus! Quam?
+                    </h3>
+                    <button mat-raised-button color="primary">Learn More</button>
+                  </div>
+                  <div class="col-7">
+                    <img style="width: 100%;" src="../../../assets/images/backgrounds/documentation.jpg" alt="">
+                  </div>
+                </div>
+              </mat-card-content>
+            </mat-card>
+      </ng-template>
+      </ngb-carousel>
+    </div>
+</section>

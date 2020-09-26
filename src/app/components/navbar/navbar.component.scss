@@ -1,0 +1,51 @@
+.section{
+  padding: 1rem;
+  display: flex;
+  height: 25vh;
+}
+
+.searchBar{
+  width: 100%;
+  font-size: 14px;
+  padding-top: 1rem;
+  margin: 3rem;
+  
+    .center {
+      margin-left: auto;
+      margin-right: auto;
+      mat-form-field {
+        width: 90%;
+      }
+    }
+    .searchButton{
+      height: 47px;
+      margin-bottom: 1rem;
+      margin-left: 1rem;
+    }
+}
+.mat-toolbar {
+  background-color: transparent;
+  color: #fff;
+}
+
+.opaque-form-field {
+     .mat-form-field-outline {
+    background-color: #fff;
+  }  
+}
+.example-spacer {
+  flex: 1 1 auto;
+}
+.loc{
+  vertical-align: sub;
+  font-size: 22px;
+  margin-right: 5px;
+}
+
+.mat-form-field-appearance-outline {
+
+	.mat-form-field-prefix,
+	.mat-form-field-suffix {
+		align-self: flex-end;
+	}
+}
