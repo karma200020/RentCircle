@@ -1,18 +1,39 @@
 <p id="section">
   <mat-toolbar >
     <mat-toolbar-row>
-      <span>Rent Circle</span>
+      <span routerLink='/'>Rent Circle</span>
       <div class="searchBar">
-      
+
         <form [formGroup]="stateForm" class="center">
-            <mat-form-field appearance="outline" color="primary" class="opaque-form-field">
+          <mat-form-field appearance="outline" style="width: 10rem; margin-top: 1rem !important;" >
+            <mat-label>Category</mat-label>
+            <mat-select matNativeControl [(ngModel)]="selectedValue" [ngModelOptions]="{standalone: true}" required>
+              <mat-option value="Air Compressors,Tools & Accessories">Air Compressors,Tools & Accessories</mat-option>
+              <mat-option value="Automative">Automative</mat-option>
+              <mat-option value="Hand Tools">Hand Tools</mat-option>
+              <mat-option value="Power Tools Accessories">Power Tools Accessories</mat-option>
+              <mat-option value="Power Tools">Power Tools</mat-option>
+              <mat-option value="Safety & Security Tools">Safety & Security Tools</mat-option>
+              <mat-option value="Weilding & Soldering tools">Weilding & Soldering tools</mat-option>
+              <mat-option value="Shop Vaccums">Shop Vaccums</mat-option>
+              <mat-option value="Clothing & Footwear">Clothing & Footwear</mat-option>
+              <mat-option value="Safety Equipment">Safety Equipment</mat-option>
+              <mat-option value="Outdoor Power Equipment">Outdoor Power Equipment</mat-option>
+              <mat-option value="Water Damage Remediation">Water Damage Remediation</mat-option>
+              <mat-option value="Power Tool Pro">Power Tool Pro</mat-option>
+
+            </mat-select>
+          </mat-form-field>
+            <mat-form-field appearance="outline" color="secondary" class="opaque-form-field">
               <input type="text"
                      matInput
                      placeholder="Search property"
                      formControlName="stateGroup"
                      required
+                     [(ngModel)]="item"
                      [matAutocomplete]="autoGroup">
-                <mat-icon matSuffix>search</mat-icon>
+                <mat-icon style="color: black;" matSuffix>search</mat-icon>
+                <span matPrefix></span>
                 <mat-autocomplete #autoGroup="matAutocomplete">
                   <mat-optgroup *ngFor="let group of stateGroupOptions | async" [label]="group.letter">
                     <mat-option *ngFor="let name of group.names" [value]="name">
@@ -21,10 +42,11 @@
                 </mat-optgroup>
               </mat-autocomplete>
             </mat-form-field>
-            <button type="submit" class="searchButton" mat-raised-button >Search</button>
+
           </form>
+          <button type="submit" (click)="search()" class="searchButton" mat-raised-button >Search</button>
         </div>
-    
+
       <div>
       <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
         <mat-icon>menu</mat-icon>
@@ -32,17 +54,41 @@
     </div>
     </mat-toolbar-row>
 
-    <mat-toolbar-row>
+    <mat-toolbar-row style="justify-content: space-between;">
       <span><span class="material-icons loc">
         my_location
         </span>Find your location</span>
-      <span class="example-spacer"></span>
+        <div class="buttonList">
+          <button mat-flat-button class="navButton" color="primary">Explore</button>
+          <button mat-flat-button class="navButton" color="primary">Post Ad</button>
+          <button mat-flat-button class="navButton" color="primary" mat-button [matMenuTriggerFor]="menu2">Domestic Tools</button>
+          <mat-menu #menu2="matMenu">
+            <button mat-menu-item>Air Compressors,Tools & Accessories</button>
+            <button mat-menu-item>Automative</button>
+            <button mat-menu-item>Hand Tools</button>
+          </mat-menu>
+
+          <button mat-flat-button class="navButton" color="primary" mat-button [matMenuTriggerFor]="menu">Tools and Equipments</button>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item>Weilding & Soldering tools</button>
+            <button mat-menu-item>Safety Equipment</button>
+          </mat-menu>
+          <button mat-flat-button class="navButton" color="primary"><span class="material-icons bIcon">
+            person
+            </span>Log In</button>
+            <button mat-flat-button class="navButton" color="primary"><span class="material-icons bIcon">
+              shopping_cart
+              </span>My Cart</button>
+        </div>
+
+      <div>
       <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
         <mat-icon>favorite</mat-icon>
       </button>
       <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
         <mat-icon>share</mat-icon>
       </button>
+    </div>
     </mat-toolbar-row>
   </mat-toolbar>
 </p>

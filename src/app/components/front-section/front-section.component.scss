@@ -4,7 +4,7 @@
       font-size: 34px;
     }
   }
-  
+
   .example-header-image {
     background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
     background-size: cover;
@@ -12,4 +12,42 @@
   section{
     height: 90vh;
     display: block;
+  }
+  .bg1{
+    background-image: url('./../../../assets/images/category/engineers.jpg');
+    background-size: cover;
+    h2{
+      color: #7365bfcc;
+      padding-top: 1rem;
+    }
+  }
+  .bg2{
+    background-image: url('./../../../assets/images/backgrounds/documentation.jpg');
+    background-size: cover;
+    h2{
+      color: #7365bfcc;
+      padding-top: 1rem;
+    }
+  }
+  .ad{
+    position: relative;
+    height: 35vh;
+    background-size: contain;
+    margin: 1rem;
+    border-radius: 5px;
+
+    .adB{
+      position: absolute;
+      top: 44%;
+      left: 40%;
+      background-color: white;
+      color: #673ab7;
+    }
+  }
+  .ad1{
+    background-image: linear-gradient(180deg, rgb(4 4 4 / 13%) 0%, rgba(0, 0, 0, 0.7203256303) 100%), url("../../../assets/images/category/tools.jpg");
+  }
+  .ad2{
+    background-image: linear-gradient(180deg, rgb(4 4 4 / 13%) 0%, rgba(0, 0, 0, 0.7203256303) 100%), url("../../../assets/images/category/compressors.jpg");
+    background-size: cover !important;
   }

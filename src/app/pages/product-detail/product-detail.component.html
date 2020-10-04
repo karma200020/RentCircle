@@ -1,0 +1,375 @@
+<div class="bg">
+<app-navbar></app-navbar>
+<section style="background-color: white;">
+  <div class="container summary">
+    <div class="row">
+      <div class="col-2 text price">
+        $20,000
+      </div>
+      <div class="col-5 text">
+        <div class="title">
+          4 BHK RESIDENTIAL HOUSE
+        </div>
+        <div class="sub">
+          For Rent in Mehrauli
+        </div>
+      </div>
+        <div class="col-5">
+          <mat-card style="margin-top: 5px;">
+            <div class="row">
+            <div class="col-7">
+            <mat-card-header>
+                <div mat-card-avatar class="example-header-image"></div>
+                <mat-card-title>TANYA SETH</mat-card-title>
+                <mat-card-subtitle>OWNER</mat-card-subtitle>
+              </mat-card-header>
+              </div>
+              <div class="col-5">
+                <button mat-flat-button class="navButton" color="primary">CONTACT NOW</button>
+              </div>
+            </div>
+          </mat-card>
+        </div>
+
+    </div>
+  </div>
+    <div class="container a">
+        <div class="row">
+            <div  class="col-md-5 slide-wrapper" style=" position: static;align-items: flex-start;">
+                <div class="row no-gutters" style="    position: sticky;
+                top: 8rem !important;
+                height: 38vmax;
+                margin-bottom: 6rem;">
+                    <div class="col-md-2" style="height: 95%;flex: 0 0 12.666667% !important;
+                    max-width: 12.666667% !important;">
+                        <ul ngbNav [(activeId)]="active" #nav="ngbNav" class='navList' style="max-height: 94%;overflow-y: auto !important;position: relative; overflow-x: hidden;">
+                            <li ngbNavItem [ngbNavItem]="i"  *ngFor="let imagelist of product.images; index as i;">
+                              <a ngbNavLink>
+                                <div  ><img style="border: 1px #f0f0f0 solid; width: 100%;" src="{{product.images[i].path}}"></div>
+                            </a>
+
+                              <ng-template ngbNavContent>
+
+                                  <div style="position: relative;" *ngIf="!(i == 1)"><img style="position: relative;" src="{{product.images[i].path}}">
+                                    <span (click)="goToSlide(nav.activeId+1)" class="material-icons invisible1 right">arrow_forward_ios</span>
+                                    <span (click)="goToSlide2(nav.activeId-1)" class="material-icons invisible1 left">arrow_back_ios</span>
+                                </div>
+                                </ng-template>
+                            </li>
+                        </ul>
+                    </div>
+
+                        <div class="col-md-10" style="    flex: 0 0 87.333333% !important;
+                        max-width: 87.333333% !important;">
+                        <div >
+                            <span style="position: static;" [ngbNavOutlet]="nav" class='slideContainer'>
+                            </span>
+
+
+                        </div>
+                    </div>
+                    <div class="col-2" style="flex: 0 0 12.666667% !important;
+                    max-width: 12.666667% !important;">
+
+                    </div>
+                    <div class='button-grp col-10' style='display: flex;  flex: 0 0 87.333333% !important;
+                        max-width: 87.333333% !important;'>
+                        <button mat-raised-button id="addCart"  class="btn callback" >
+                            <div class='wr wr0'>
+                                <span style="margin-top: 5px;" class="material-icons">
+                                  favorite
+                                    </span> <p style="margin-left: 7px !important; color: #673ab7;">WISHLIST</p>
+                            </div>
+                        </button>
+                        <button  mat-raised-button id='buyNow' type="button"
+                             class="btn" >
+                             <div class='wr wr1'>
+                                <span style="margin-top: 6px;" class="material-icons">
+                                    flash_on
+                                    </span>
+                                <p class='buy'(click)="openDialog()">RENT NOW</p>
+                             </div>
+                            </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-7 content">
+              <div class="navigate">
+                Rent > flats > 4 bhk
+              </div>
+              <div class="heading">
+                4 bhk 26 Sq. ft Residential Apartments for Rent in barnala road,Sirsa
+              </div>
+              <div class="located">
+                Apartment in <a href="google.com">FRIENDS COLONY</a>, NEW DELHI
+              </div>
+              <div class="rating">
+                <ng-template #t let-fill="fill">
+                  <span class="star" [class.full]="fill === 100">
+                    <span class="half" [style.width.%]="fill">&#9733;</span>&#9733;
+                  </span>
+                </ng-template>
+              <ngb-rating [(rate)]="currentRate" [starTemplate]="t" [readonly]="true" [max]="5"></ngb-rating><span class="verifyTag"><span class="material-icons verify">check_circle</span> RentCircle Verified Users </span>
+              </div>
+              <div class="price">
+                $20,000
+              </div>
+              <div class="desc">
+                <h2>
+                  Quick Description
+                </h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis reprehenderit minus consequatur ipsum illum minima commodi laborum recusandae mollitia repudiandae sit quisquam consequuntur esse quae rerum, laboriosam tenetur eum eos.</p>
+              </div>
+              <div class="row table">
+                <div class="col-6">
+                  <div class="label">
+                    bedrooms
+                  </div>
+                  <div class="value">
+                    4
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="label">
+                    bathrooms
+                  </div>
+                  <div class="value">
+                    4
+                  </div>
+                </div>
+              </div>
+              <div class="row table">
+                <div class="col-6">
+                  <div class="label">
+                    Super Area
+                  </div>
+                  <div class="value">
+                    630 sqft
+                  </div>
+                  <div class="sub-val">
+                    $10/sqft
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="label">
+                    Carpet Area
+                  </div>
+                  <div class="value">
+                    625 sqft
+                  </div>
+                  <div class="sub-val">
+                    $10/sqft
+                  </div>
+                </div>
+              </div>
+              <div class="row table">
+                <div class="col-6">
+                  <div class="label">
+                    Furnished status
+                  </div>
+                  <div class="value">
+                    Semi-Furnished
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="label">
+                    Car Parking
+                  </div>
+                  <div class="value">
+                    Two Car Parking
+                  </div>
+                </div>
+              </div>
+              <div class="delivery">
+                <div class="row">
+                  <div class="col-5">
+                    <h2 style="padding-top: 1rem;">
+                      DELIVERY / PICK-UP  :
+                    </h2>
+                  </div>
+                  <div class="col-7">
+                    <form [formGroup]="options">
+                    <mat-form-field appearance="outline">
+                      <mat-label>Delivery Availability</mat-label>
+                      <input matInput placeholder="Placeholder" formControlName="delivery">
+                      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                      <mat-hint>Delivery/ pickup date might vary upon your location</mat-hint>
+                    </mat-form-field>
+                    <button id="check" mat-raised-button color="accent">Check</button>
+                  </form>
+                  </div>
+                </div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56061.166592339905!2d77.24506397363115!3d28.575079954620133!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce391b053aeef%3A0x3c66da6bc8fccdde!2sNew%20Friends%20Colony%2C%20New%20Delhi%2C%20Delhi!5e0!3m2!1sen!2sin!4v1601696349667!5m2!1sen!2sin" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+              </div>
+              <div class="reviews">
+                <h2>CUSTOMER REVIEWS</h2>
+                <div class="review">
+                  <div class="rate">
+                    4 <span style=" vertical-align: text-top; font-size: 16px;" class="material-icons">
+                      grade
+                      </span>
+                  </div>
+                  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit eos quo obcaecati? Mollitia explicabo corporis cum eos ducimus accusamus, ad molestiae maxime optio autem libero sunt voluptatibus deserunt assumenda recusandae.</p>
+                  <h3><span class="material-icons verify">check_circle</span> Hrithik roshan</h3>
+                </div>
+                <div class="review">
+                  <div class="rate">
+                    4 <span style=" vertical-align: text-top; font-size: 16px;" class="material-icons">
+                      grade
+                      </span>
+                  </div>
+                  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit eos quo obcaecati? Mollitia explicabo corporis cum eos ducimus accusamus, ad molestiae maxime optio autem libero sunt voluptatibus deserunt assumenda recusandae.</p>
+                  <h3><span class="material-icons verify">check_circle</span> Hrithik roshan</h3>
+                </div>
+                <div class="review">
+                  <div class="rate">
+                    4 <span style=" vertical-align: text-top; font-size: 16px;" class="material-icons">
+                      grade
+                      </span>
+                  </div>
+                  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit eos quo obcaecati? Mollitia explicabo corporis cum eos ducimus accusamus, ad molestiae maxime optio autem libero sunt voluptatibus deserunt assumenda recusandae.</p>
+                  <h3><span class="material-icons verify">check_circle</span> Hrithik roshan</h3>
+                </div>
+                <div class="review">
+                  <div class="rate">
+                    4 <span style=" vertical-align: text-top; font-size: 16px;" class="material-icons">
+                      grade
+                      </span>
+                  </div>
+                  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit eos quo obcaecati? Mollitia explicabo corporis cum eos ducimus accusamus, ad molestiae maxime optio autem libero sunt voluptatibus deserunt assumenda recusandae.</p>
+                  <h3><span class="material-icons verify">check_circle</span> Hrithik roshan</h3>
+                </div>
+
+              </div>
+              <div class="qnas">
+                <h2>QUESTIONS AND ANSWERS</h2>
+                <div class="qna">
+                  <p class="question"> Question : Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam accusamus sint quasi sit totam aut! Non nulla, architecto, laborum expedita in nesciunt aliquam recusandae sit amet voluptatibus distinctio beatae saepe?</p>
+                  <p>Answer : Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate magnam quibusdam libero consectetur rerum expedita impedit similique, quos commodi laboriosam, iste nemo at placeat doloribus, exercitationem numquam inventore quo modi.</p>
+                </div>
+                <div class="qna">
+                  <p class="question"> Question : Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam accusamus sint quasi sit totam aut! Non nulla, architecto, laborum expedita in nesciunt aliquam recusandae sit amet voluptatibus distinctio beatae saepe?</p>
+                  <p>Answer : Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate magnam quibusdam libero consectetur rerum expedita impedit similique, quos commodi laboriosam, iste nemo at placeat doloribus, exercitationem numquam inventore quo modi.</p>
+                </div>
+                <div class="qna">
+                  <p class="question"> Question : Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam accusamus sint quasi sit totam aut! Non nulla, architecto, laborum expedita in nesciunt aliquam recusandae sit amet voluptatibus distinctio beatae saepe?</p>
+                  <p>Answer : Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate magnam quibusdam libero consectetur rerum expedita impedit similique, quos commodi laboriosam, iste nemo at placeat doloribus, exercitationem numquam inventore quo modi.</p>
+                </div>
+                <div class="qna">
+                  <p class="question"> Question : Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam accusamus sint quasi sit totam aut! Non nulla, architecto, laborum expedita in nesciunt aliquam recusandae sit amet voluptatibus distinctio beatae saepe?</p>
+                  <p>Answer : Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate magnam quibusdam libero consectetur rerum expedita impedit similique, quos commodi laboriosam, iste nemo at placeat doloribus, exercitationem numquam inventore quo modi.</p>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+  <div class="container together">
+    <h2>Frequently bought together </h2>
+    <div class="row">
+      <div class="col-3">
+        <mat-card class="example-card">
+          <img mat-card-image src="./../../../assets/images/category/tools.jpg" alt="Photo of a Shiba Inu">
+          <mat-card-header>
+            <mat-card-title>Power Drill</mat-card-title>
+            <mat-card-subtitle>
+              <div class="rating">
+              <ng-template #t let-fill="fill">
+              <span class="star" [class.full]="fill === 100">
+                <span class="half" [style.width.%]="fill">&#9733;</span>&#9733;
+              </span>
+            </ng-template>
+          <ngb-rating [(rate)]="currentRate" [starTemplate]="t" [readonly]="true" [max]="5"></ngb-rating>
+        </div>
+        </mat-card-subtitle>
+          </mat-card-header>
+
+          <mat-card-content>
+            <h3 style="font-size: 28px;">
+              $232
+            </h3>
+            <h3 class="tags">
+             Power Tool
+            </h3>
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-button>ADD TO CART</button>
+            <button mat-button>RENT NOW</button>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+      <div class="col-3">
+        <mat-card class="example-card">
+          <img mat-card-image src="./../../../assets/images/category/tools.jpg" alt="Photo of a Shiba Inu">
+          <mat-card-header>
+            <mat-card-title>Power Drill</mat-card-title>
+            <mat-card-subtitle>
+              <div class="rating">
+              <ng-template #t let-fill="fill">
+              <span class="star" [class.full]="fill === 100">
+                <span class="half" [style.width.%]="fill">&#9733;</span>&#9733;
+              </span>
+            </ng-template>
+          <ngb-rating [(rate)]="currentRate" [starTemplate]="t" [readonly]="true" [max]="5"></ngb-rating>
+        </div>
+        </mat-card-subtitle>
+          </mat-card-header>
+
+          <mat-card-content>
+            <h3 style="font-size: 28px;">
+              $232
+            </h3>
+            <h3 class="tags">
+             Power Tool
+            </h3>
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-button>ADD TO CART</button>
+            <button mat-button>RENT NOW</button>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+      <div class="col-3">
+        <mat-card class="example-card">
+          <img mat-card-image src="./../../../assets/images/category/tools.jpg" alt="Photo of a Shiba Inu">
+          <mat-card-header>
+            <mat-card-title>Power Drill</mat-card-title>
+            <mat-card-subtitle>
+              <div class="rating">
+              <ng-template #t let-fill="fill">
+              <span class="star" [class.full]="fill === 100">
+                <span class="half" [style.width.%]="fill">&#9733;</span>&#9733;
+              </span>
+            </ng-template>
+          <ngb-rating [(rate)]="currentRate" [starTemplate]="t" [readonly]="true" [max]="5"></ngb-rating>
+        </div>
+        </mat-card-subtitle>
+          </mat-card-header>
+
+          <mat-card-content>
+            <h3 style="font-size: 28px;">
+              $232
+            </h3>
+            <h3 class="tags">
+             Power Tool
+            </h3>
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-button>ADD TO CART</button>
+            <button mat-button>RENT NOW</button>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+      <div class="col-3">
+        <div class="totalsum">
+          <h3 style="font-size: 22px;padding-bottom: 2rem;">BUY TOGETHER</h3>
+          <p></p>
+          $110 + $2323 + $324
+          <p></p>
+          <button mat-button id="together" color="primary" (click)="openDialog()">BUY NOW</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<app-footer></app-footer>
+</div>

@@ -1,9 +1,18 @@
 .example-card {
-    max-width: 400px;
+    max-width: 100%;
+    margin: 1rem;
+    transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
+    display: block;
+    position: relative;
+    padding: 16px;
+    border-radius: 4px;
+    height: 92%;
+    margin: 1rem;
+    padding: 1rem;
   }
-  
+
   .example-header-image {
-    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-image: url('./../../../assets/icons/avatar.png');
     background-size: cover;
   }
 
@@ -13,4 +22,24 @@
   }
   title{
     padding-bottom: 3rem;
+  }
+  .section{
+    background-color: white;
+    padding: 2rem 0;
+  }
+
+  .star {
+    position: relative;
+    display: inline-block;
+    font-size: 2rem;
+    color: #d3d3d3;
+  }
+  .full {
+    color: #ffd740;
+  }
+  .half {
+    position: absolute;
+    display: inline-block;
+    overflow: hidden;
+    color: #ffd740;
   }

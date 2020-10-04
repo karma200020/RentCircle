@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import {startWith, map} from 'rxjs/operators';
 
@@ -23,13 +24,16 @@ export const _filter = (opt: string[], value: string): string[] => {
 })
 export class NavbarComponent implements OnInit {
 
+  item:string;
+  selectedValue: string;
   // tslint:disable-next-line: variable-name
-  constructor(private _formBuilder: FormBuilder) { }
+  constructor(private _formBuilder: FormBuilder,
+              private router: Router) { }
 
   stateForm: FormGroup = this._formBuilder.group({
     stateGroup: '',
   });
-  
+
 
   stateGroups: StateGroup[] = [{
     letter: 'A',
@@ -101,6 +105,25 @@ export class NavbarComponent implements OnInit {
         startWith(''),
         map(value => this._filterGroup(value))
       );
+
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition((position) => {
+          console.log(position);
+        });
+      } else {
+        alert('Geolocation is not supported by this browser.');
+      }
+  }
+
+  search(){
+    if(!this.selectedValue){
+
+    this.router.navigate(['search', {item: this.item}]);
+    }
+    else{
+      console.log(this.selectedValue)
+      this.router.navigate(['search', {item: this.item,category: this.selectedValue}]);
+    }
   }
 
   private _filterGroup(value: string): StateGroup[] {

@@ -1,0 +1,68 @@
+<h2 mat-dialog-title>CHECKOUT</h2>
+<mat-dialog-content class="mat-typography">
+  <div class="row">
+    <div class="col-7">
+      <h3>Your Cart ( 1 item )</h3>
+      <mat-card routerLink='/productDetail' class="example-card">
+        <mat-card-header>
+          <mat-card-title>Drill Machine</mat-card-title>
+          <mat-card-subtitle>Power Tool</mat-card-subtitle>
+        </mat-card-header>
+        <div class="row no-gutters">
+            <div class="col-4">
+                <img mat-card-image style="width: 100%;margin-top: 4px;" src="assets/images/category/tools.jpg" alt="Photo of a Shiba Inu">
+            </div>
+            <div class="col-8">
+                <mat-card-content>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur aspernatur qui consequuntur fugit accusantium repellat esse asperiores animi sit, impedit veniam nisi dolor.
+
+                    </p>
+                    <h3 style="font-size: 28px;">$200</h3>
+                  </mat-card-content>
+            </div>
+        </div>
+
+      </mat-card>
+    </div>
+    <div class="col-5">
+      <h3>PAYMENT</h3>
+      <p></p>
+      <p></p>
+      <div class="row">
+        <div class="col-6 a">
+          Item Total
+        </div>
+        <div class="col-6 b">
+          $200
+        </div>
+        <div class="col-6 a">
+          Total Tax
+        </div>
+        <div class="col-6 b">
+          $20
+        </div>
+        <div class="col-6 a">
+          Delivery Charges
+        </div>
+        <div class="col-6 b">
+          $5
+        </div>
+        <mat-divider></mat-divider>
+        <div class="col-6 b">
+          FINAL AMOUNT
+        </div>
+        <div class="col-6 b">
+          $225
+        </div>
+        <div class="col-12">
+          <button mat-button id="pay" style="color: white;background-color: #673ab7;">PAY USING RAZORPAY</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Cancel</button>
+</mat-dialog-actions>

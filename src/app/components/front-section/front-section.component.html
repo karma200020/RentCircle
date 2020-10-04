@@ -1,19 +1,21 @@
 <section>
     <div class="container">
-    <ngb-carousel #carousel [interval]="3000" [pauseOnHover]="pauseOnHover" [showNavigationIndicators]="false" (slide)="onSlide($event)">
+    <ngb-carousel #carousel [interval]="3000" [pauseOnHover]="false" [showNavigationIndicators]="false" [showNavigationArrows]='false' (slide)="onSlide($event)">
         <ng-template ngbSlide>
             <mat-card class="example-card slide-in-right slide-out-left">
                 <mat-card-content>
-                  <div class="row">
-                    <div class="col-5">
-                      <h2>Find your dream house</h2>
-                      <h3>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto eligendi possimus, repellendus laudantium pariatur provident. Quam suscipit non in beatae perferendis laboriosam natus quae, maiores eveniet? Illo, dicta delectus! Quam?
-                      </h3>
-                      <button mat-raised-button color="primary">Search Property Near You</button>
+                  <div class="row ">
+                    <div class="col-6  bg1">
+                      <h2>Find The Right Tools with Ease</h2>
                     </div>
-                    <div class="col-7">
-                      <img style="width: 100%;" src="../../../assets/images/backgrounds/4370476.jpg" alt="">
+                    <div class="col-6">
+                      <div class="ad ad1">
+                        <button mat-raised-button class="adB" color="primary">Hand Tools</button>
+                      </div>
+                      <div class="ad ad1">
+                        <button mat-raised-button class="adB" color="primary">Power Tools</button>
+                      </div>
+
                     </div>
                   </div>
                 </mat-card-content>
@@ -22,16 +24,18 @@
         <ng-template ngbSlide>
           <mat-card class="example-card slide-in-right slide-out-left">
               <mat-card-content>
-                <div class="row">
-                  <div class="col-5">
-                    <h2>Ease up documentation process</h2>
-                    <h3>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto eligendi possimus, repellendus laudantium pariatur provident. Quam suscipit non in beatae perferendis laboriosam natus quae, maiores eveniet? Illo, dicta delectus! Quam?
-                    </h3>
-                    <button mat-raised-button color="primary">Learn More</button>
+                <div class="row ">
+                  <div class="col-6  bg2">
+                    <h2>Find The Right Tools with Ease</h2>
                   </div>
-                  <div class="col-7">
-                    <img style="width: 100%;" src="../../../assets/images/backgrounds/documentation.jpg" alt="">
+                  <div class="col-6">
+                    <div class="ad ad2">
+                      <button mat-raised-button class="adB" color="primary">Air Compressors</button>
+                    </div>
+                    <div class="ad ad2">
+                      <button mat-raised-button class="adB" color="primary">Shop Vaccum</button>
+                    </div>
+
                   </div>
                 </div>
               </mat-card-content>

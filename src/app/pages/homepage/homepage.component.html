@@ -1,0 +1,23 @@
+<div class="bg">
+<app-navbar></app-navbar>
+<app-front-section></app-front-section>
+<app-home-list></app-home-list>
+<app-footer></app-footer>
+<div class="chat">
+
+  <div *ngIf="!openChat" class="icon bounce-7" (click)="openChat = !openChat">
+    <img class="bounce-7" style="width: 85px;" src="./../../../assets/icons/robotics.png" alt="">
+  </div>
+  <div *ngIf="openChat" style="display: flex;">
+  <kendo-chat class="chatWindow"
+  [messages]="feed | async"
+  [user]="user"
+  (sendMessage)="sendMessage($event)">
+</kendo-chat>
+<img (click)="openChat = !openChat" class="bounce-7 windowIcon" style="width: 85px;" src="./../../../assets/icons/robotics.png" alt="">
+
+  </div>
+
+</div>
+
+</div>

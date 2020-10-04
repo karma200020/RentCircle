@@ -1,3 +1,22 @@
+.bg{
+  background: black;
+    color: white;
+}
+.heading{
+  font-size: 34px;
+  font-weight: 600;
+  width: fit-content;
+  border: 1px solid;
+  padding: 1rem;
+  border-radius: 26px;
+  margin: auto;
+}
+.sub{
+  margin: auto;
+  width: fit-content;
+  font-size: 12px;
+  margin-bottom: 2rem;
+}
 .container{
     padding: 2rem 0;
     .title{
@@ -9,4 +28,15 @@
         font-size: 15px;
         padding: 0.5rem 2rem;
     }
+}
+.about{
+  font-size: 13px;
+}
+.list{
+  display: flex;
+  font-size: 13px !important;
+  padding: 1rem 0;
+  .item{
+    font-size: 13px;
+  }
 }
