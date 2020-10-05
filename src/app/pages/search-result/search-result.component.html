@@ -26,19 +26,24 @@
                         <mat-checkbox class="example-margin" [(ngModel)]="checked">Hide unavailable items</mat-checkbox>
 
                         <h3 style="padding-top: 1rem;">Filter by Price</h3>
-                        <mat-slider
-                            class="example-margin"
-                            [disabled]="disabled"
-                            [invert]="invert"
-                            [max]="max"
-                            [min]="min"
-                            [step]="step"
-                            [displayWith]="formatLabel"
-                            [thumbLabel]="thumbLabel"
-                            [tickInterval]="getSliderTickInterval()"
-                            [(ngModel)]="value"
-                            [vertical]="vertical">
-                        </mat-slider>
+                        <div class="priceFilter">
+                          <mat-form-field style="width: 100%;" class="example-form-field">
+                            <mat-label>Min Price</mat-label>
+                            <input matInput type="text" [(ngModel)]="value1">
+                            <button mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value1=''">
+                              <mat-icon>close</mat-icon>
+                            </button>
+                          </mat-form-field>
+                          <mat-form-field style="width: 100%;" class="example-form-field">
+                            <mat-label>Max Price</mat-label>
+                            <input matInput type="text" [(ngModel)]="value2">
+                            <button mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value2=''">
+                              <mat-icon>close</mat-icon>
+                            </button>
+                          </mat-form-field>
+
+                        </div>
+
 
 
                         <h3 style="padding-top: 1rem;">Filter by rating</h3>
@@ -58,7 +63,7 @@
                             </mat-expansion-panel-header>
 
                             <section class="example-section">
-                                <mat-checkbox class="example-margin" [(ngModel)]="checked">Checked</mat-checkbox>
+                                <mat-checkbox class="example-margin" [(ngModel)]="checked1">Checked</mat-checkbox>
                                 <mat-checkbox class="example-margin" [(ngModel)]="indeterminate">Indeterminate</mat-checkbox>
                               </section>
 
@@ -176,7 +181,7 @@
                   </mat-card>
             </div>
             <div class="col-5">
-                <mat-card>
+                <mat-card style="height: 92%;">
                     <div class="google-maps">
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d112050.14264403876!2d77.1653629194049!3d28.64273808278667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d03e2015913e5%3A0xf657ee994810803a!2sDream%20Homes%20(Real%20estate%20%26%20Properties)!5e0!3m2!1sen!2sin!4v1601316850454!5m2!1sen!2sin" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                     </div>

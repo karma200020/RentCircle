@@ -17,6 +17,7 @@ export class SearchResultComponent implements OnInit {
   // mat-checkbox configuration variables
 
   checked = false;
+  checked1 = false;
   indeterminate = false;
   labelPosition: 'before' | 'after' = 'after';
   disabled = false;
@@ -32,6 +33,8 @@ export class SearchResultComponent implements OnInit {
   step = 50;
   thumbLabel = false;
   value = 200;
+  value1 = 200;
+  value2 = 200;
   vertical = false;
   tickInterval = 1;
 

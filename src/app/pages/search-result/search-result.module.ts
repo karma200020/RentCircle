@@ -13,6 +13,8 @@ import {MatRadioModule} from '@angular/material/radio';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {MatSliderModule} from '@angular/material/slider';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
 
 @NgModule({
@@ -30,7 +32,9 @@ import {MatSliderModule} from '@angular/material/slider';
     MatExpansionModule,
     NgbModule,
     ReactiveFormsModule,
-    MatSliderModule
+    MatSliderModule,
+    MatFormFieldModule,
+    MatInputModule
   ]
 })
 export class SearchResultModule { }
