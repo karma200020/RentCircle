@@ -161,6 +161,7 @@
 .bg{
   background: rgb(145,0,255);
   background: linear-gradient(180deg, rgba(145,0,255,1) 0%, rgba(213,213,213,1) 100%);
+  width: fit-content;
 }
 .price{
   font-size: 30px;
