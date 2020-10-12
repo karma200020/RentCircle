@@ -42,9 +42,9 @@
                 </mat-optgroup>
               </mat-autocomplete>
             </mat-form-field>
-
+            <button type="submit" (click)="search()" class="searchButton" mat-raised-button >Search</button>
           </form>
-          <button type="submit" (click)="search()" class="searchButton" mat-raised-button >Search</button>
+
         </div>
 
       <div>
@@ -59,24 +59,24 @@
         my_location
         </span>Find your location</span>
         <div class="buttonList">
-          <button mat-flat-button class="navButton" color="primary">Explore</button>
-          <button mat-flat-button class="navButton" color="primary">Post Ad</button>
-          <button mat-flat-button class="navButton" color="primary" mat-button [matMenuTriggerFor]="menu2">Domestic Tools</button>
+          <button mat-flat-button class="navButton" >Explore</button>
+          <button mat-flat-button class="navButton" >Post Ad</button>
+          <button mat-flat-button class="navButton"  mat-button [matMenuTriggerFor]="menu2">Domestic Tools</button>
           <mat-menu #menu2="matMenu">
             <button mat-menu-item>Air Compressors,Tools & Accessories</button>
             <button mat-menu-item>Automative</button>
             <button mat-menu-item>Hand Tools</button>
           </mat-menu>
 
-          <button mat-flat-button class="navButton" color="primary" mat-button [matMenuTriggerFor]="menu">Tools and Equipments</button>
+          <button mat-flat-button class="navButton"  mat-button [matMenuTriggerFor]="menu">Tools and Equipments</button>
           <mat-menu #menu="matMenu">
             <button mat-menu-item>Weilding & Soldering tools</button>
             <button mat-menu-item>Safety Equipment</button>
           </mat-menu>
-          <button mat-flat-button class="navButton" color="primary"><span class="material-icons bIcon">
+          <button mat-flat-button routerLink='auth/login' class="navButton" ><span class="material-icons bIcon">
             person
             </span>Log In</button>
-            <button mat-flat-button class="navButton" color="primary"><span class="material-icons bIcon">
+            <button mat-flat-button class="navButton" ><span class="material-icons bIcon">
               shopping_cart
               </span>My Cart</button>
         </div>

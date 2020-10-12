@@ -1,0 +1,43 @@
+<app-navbar></app-navbar>
+<div class="bg">
+  <div class="container p-2">
+    <mat-card class="login-card">
+      <div class="row">
+        <div class="col-md-6 col-lg-6 col-xl-6 img">
+          <img mat-card-image src="../../../assets/images/backgrounds/login.jpg" alt="login background photo">
+        </div>
+        <div class="col-md-6 col-lg-6 col-xl-6 col-12 content">
+
+          <h1 class="title">LOG IN</h1>
+          <h2 class="subtitle">Welcome back! Get access to your Orders,Wishlist and posts!</h2>
+
+          <form [formGroup]="options">
+
+            <mat-form-field appearance="fill"
+                [hideRequiredMarker]="true"
+                [floatLabel]="true">
+                <mat-label>E Mail ID</mat-label>
+              <input matInput [formControl]="email" placeholder="Enter your E mail ID" required>
+            </mat-form-field>
+
+            <mat-form-field appearance="fill" [floatLabel]="true">
+              <mat-label>Password</mat-label>
+              <input matInput [formControl]="password" placeholder="Enter your password">
+            </mat-form-field>
+
+            <button mat-raised-button class="btn" color="primary">LOG IN</button>
+            <div class="or">
+              OR?
+            </div>
+            <button mat-raised-button class="btn" >Forgot Password?</button>
+            <div routerLink='/auth/signup' class="or two">
+              New to RentCircle? Sign up!
+            </div>
+          </form>
+        </div>
+      </div>
+
+    </mat-card>
+  </div>
+</div>
+<app-footer></app-footer>

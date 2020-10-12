@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ChatModule } from '@progress/kendo-angular-conversational-ui';
+import { MatInputModule } from '@angular/material/input';
 
 
 
@@ -14,12 +15,14 @@ import { ChatModule } from '@progress/kendo-angular-conversational-ui';
   declarations: [
     AppComponent,
 
+
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     ChatModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

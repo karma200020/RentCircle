@@ -25,21 +25,18 @@
     .searchButton{
 
       height: 50px;
-      margin-bottom: 1rem;
-      margin-top: 0.9rem;
-      margin-right: 1rem;
       width: 100px;
-      margin-left: -110px;
+      vertical-align: super;
 
     }
 }
 .mat-toolbar {
-  background-color: transparent;
-  color: #fff;
+  color: #525252;
+  background-color: #fff;
 }
 
 .opaque-form-field {
-  width: 51vw !important;
+  width: 62vw !important;
      .mat-form-field-outline {
     background-color: #fff;
   }

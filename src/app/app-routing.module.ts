@@ -25,6 +25,12 @@ const routes: Routes = [
     path: 'checkout',
     loadChildren: () => import('./pages/checkout/checkout.module').then(m => m.CheckoutModule)
   },
+  {
+    path: 'auth',
+    loadChildren: () => import('./pages/auth/auth.module').then(m => m.AuthModule)
+  },
+  { path: 'account', loadChildren: () => import('./pages/account/account.module').then(m => m.AccountModule) },
+  { path: 'category', loadChildren: () => import('./pages/category/category.module').then(m => m.CategoryModule) },
 ];
 
 @NgModule({
