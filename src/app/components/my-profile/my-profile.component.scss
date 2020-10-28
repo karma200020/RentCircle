@@ -1,0 +1,27 @@
+.container{
+  max-width: 85%;
+  margin-left: 0;
+
+  button{
+    height: 50px;
+    .icon{
+      font-size: 20px;
+      vertical-align: text-bottom;
+      margin-right: 5px;
+    }
+  }
+
+  .example-form{
+    padding: 1rem;
+    text-align: left;
+  }
+  .b{
+
+    margin-top: 4px;
+
+  }
+
+  .example-full-width{
+    width: 100%;
+  }
+}

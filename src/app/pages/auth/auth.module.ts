@@ -12,12 +12,18 @@ import {ReactiveFormsModule} from "@angular/forms";
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { AuthService } from '../../services/auth.service';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { CookieModule } from 'ngx-cookie';
 
 
 @NgModule({
   declarations: [AuthComponent, LoginComponent, SignupComponent],
+  providers: [AuthService],
   imports: [
     CommonModule,
+    HttpClientModule,
     AuthRoutingModule,
     HomepageModule,
     MatCardModule,
@@ -25,7 +31,9 @@ import { MatInputModule } from '@angular/material/input';
     ReactiveFormsModule,
     MatFormFieldModule,
     MatIconModule,
-    MatInputModule
+    MatInputModule,
+    MatSnackBarModule,
+    CookieModule.forRoot()
   ]
 })
 export class AuthModule { }

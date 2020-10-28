@@ -29,8 +29,18 @@ const routes: Routes = [
     path: 'auth',
     loadChildren: () => import('./pages/auth/auth.module').then(m => m.AuthModule)
   },
-  { path: 'account', loadChildren: () => import('./pages/account/account.module').then(m => m.AccountModule) },
-  { path: 'category', loadChildren: () => import('./pages/category/category.module').then(m => m.CategoryModule) },
+  {
+    path: 'account',
+    loadChildren: () => import('./pages/account/account.module').then(m => m.AccountModule)
+  },
+  {
+     path: 'category',
+     loadChildren: () => import('./pages/category/category.module').then(m => m.CategoryModule)
+  },
+  {
+     path: 'cart',
+     loadChildren: () => import('./pages/cart/cart.module').then(m => m.CartModule) },
+  { path: 'wishlist', loadChildren: () => import('./pages/wishlist/wishlist.module').then(m => m.WishlistModule) },
 ];
 
 @NgModule({

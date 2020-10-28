@@ -1,0 +1,92 @@
+<div class="container">
+  <mat-card>
+    <mat-card-title>PROFILE INFORMATION</mat-card-title>
+    <mat-card-content>
+
+        <form class="example-form">
+          <div class="row">
+            <div class="col-12">
+              <h2>Contact Details</h2>
+            </div>
+            <div class="col-6">
+              <mat-form-field class="example-full-width" appearance="outline">
+                <mat-label>Email</mat-label>
+                <input matInput [formControl]="emailFormControl" placeholder="Ex. pat@example.com">
+                <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+                  Please enter a valid email address
+                </mat-error>
+                <mat-error *ngIf="emailFormControl.hasError('required')">
+                  Email is <strong>required</strong>
+                </mat-error>
+              </mat-form-field>
+            </div>
+            <div class="col-6">
+              <mat-form-field class="example-full-width" appearance="outline">
+                <mat-label>Contact Number</mat-label>
+                <input matInput [formControl]="emailFormControl" placeholder="Ex. pat@example.com">
+                <mat-error *ngIf="contactFormControl.hasError('email') && !contactFormControl.hasError('required')">
+                  Please enter a valid Contact Number
+                </mat-error>
+                <mat-error *ngIf="contactFormControl.hasError('required')">
+                  Contact Number is <strong>required</strong>
+                </mat-error>
+              </mat-form-field>
+            </div>
+            <div class="col-12">
+              <h2>Personal Information</h2>
+            </div>
+
+            <div class="col-6">
+              <mat-form-field class="example-full-width" appearance="outline">
+                <mat-label>First Name</mat-label>
+                <input matInput [formControl]="fnameFormControl" placeholder="Ex. pat@example.com">
+                <mat-error *ngIf="fnameFormControl.hasError('email') && !fnameFormControl.hasError('required')">
+                  Please enter a valid First Name
+                </mat-error>
+                <mat-error *ngIf="fnameFormControl.hasError('required')">
+                  First Name is <strong>required</strong>
+                </mat-error>
+              </mat-form-field>
+            </div>
+            <div class="col-6">
+              <mat-form-field class="example-full-width" appearance="outline">
+                <mat-label>Last Name</mat-label>
+                <input matInput [formControl]="lnameFormControl" placeholder="Ex. pat@example.com">
+                <mat-error *ngIf="lnameFormControl.hasError('email') && !lnameFormControl.hasError('required')">
+                  Please enter a valid Last Name
+                </mat-error>
+                <mat-error *ngIf="lnameFormControl.hasError('required')">
+                  Last Name is <strong>required</strong>
+                </mat-error>
+              </mat-form-field>
+            </div>
+            <div class="col-12">
+              <h2>Default Location</h2>
+            </div>
+
+            <div class="col-6">
+              <mat-form-field class="example-full-width" appearance="outline">
+                <mat-label>Default location</mat-label>
+                <input matInput [formControl]="locFormControl" placeholder="Ex. pat@example.com">
+                <mat-error *ngIf="locFormControl.hasError('email') && !locFormControl.hasError('required')">
+                  Please enter a valid Default location
+                </mat-error>
+                <mat-error *ngIf="locFormControl.hasError('required')">
+                  Default location is <strong>required</strong>
+                </mat-error>
+              </mat-form-field>
+            </div>
+            <div class="col-6">
+              <button class="example-full-width b" mat-stroked-button color="primary"><span class="material-icons icon">
+                gps_fixed
+                </span>Use Current Location</button>
+            </div>
+            <div class="col-12">
+              <button class="example-full-width" mat-raised-button color="primary">Update Information</button>
+            </div>
+
+          </div>
+        </form>
+    </mat-card-content>
+  </mat-card>
+</div>

@@ -1,0 +1,119 @@
+<app-navbar></app-navbar>
+<div class="container">
+  <div class="row">
+    <div class="col-8">
+      <mat-card>
+        <mat-card-title class="title">My Cart</mat-card-title>
+        <mat-divider class="divider"></mat-divider>
+        <mat-card-content>
+         <div class="cartItems">
+           <div class="row item">
+             <div class="col-3">
+              <img src="./../../../assets/images/category/tools.jpg" class="prodImage" alt="">
+             </div>
+             <div class="col-5">
+               <h3 class="title">Power Tool</h3>
+               <div class="rating">
+                <ng-template #t let-fill="fill">
+                  <span class="star" [class.full]="fill === 100">
+                    <span class="half" [style.width.%]="fill">&#9733;</span>&#9733;
+                  </span>
+                </ng-template>
+              <ngb-rating [(rate)]="currentRate" [starTemplate]="t" [readonly]="true" [max]="5"></ngb-rating>
+              <h3>$2000 <span class="crossed">$2300</span></h3>
+              </div>
+             </div>
+             <div class="col-4">
+               <h4 class="delivery">Expected delivery by 1st Nov 2020</h4>
+             </div>
+           </div>
+           <div class="row item">
+            <div class="col-3">
+             <img src="./../../../assets/images/category/tools.jpg" class="prodImage" alt="">
+            </div>
+            <div class="col-5">
+              <h3 class="title">Power Tool</h3>
+              <div class="rating">
+               <ng-template #t let-fill="fill">
+                 <span class="star" [class.full]="fill === 100">
+                   <span class="half" [style.width.%]="fill">&#9733;</span>&#9733;
+                 </span>
+               </ng-template>
+             <ngb-rating [(rate)]="currentRate" [starTemplate]="t" [readonly]="true" [max]="5"></ngb-rating>
+             <h3>$2000 <span class="crossed">$2300</span></h3>
+             </div>
+            </div>
+            <div class="col-4">
+              <h4 class="delivery">Expected delivery by 1st Nov 2020</h4>
+            </div>
+          </div>
+          <div class="row item">
+            <div class="col-3">
+             <img src="./../../../assets/images/category/tools.jpg" class="prodImage" alt="">
+            </div>
+            <div class="col-5">
+              <h3 class="title">Power Tool</h3>
+              <div class="rating">
+               <ng-template #t let-fill="fill">
+                 <span class="star" [class.full]="fill === 100">
+                   <span class="half" [style.width.%]="fill">&#9733;</span>&#9733;
+                 </span>
+               </ng-template>
+             <ngb-rating [(rate)]="currentRate" [starTemplate]="t" [readonly]="true" [max]="5"></ngb-rating>
+             <h3>$2000 <span class="crossed">$2300</span></h3>
+             </div>
+            </div>
+            <div class="col-4">
+              <h4 class="delivery">Expected delivery by 1st Nov 2020</h4>
+            </div>
+          </div>
+         </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <div class="col-4">
+      <mat-card>
+        <mat-card-title>Order Summary</mat-card-title>
+        <mat-card-content class="summary">
+          <div class="row">
+            <div class="col-6">
+              <h3>Price</h3>
+            </div>
+            <div class="col-6">
+              <h3>
+                $200
+              </h3>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-6">
+              <h3>
+                Delivery Charges
+              </h3>
+            </div>
+            <div class="col-6">
+              <h3>
+                $20
+              </h3>
+            </div>
+          </div>
+          <mat-divider class="divider"></mat-divider>
+          <div class="row final">
+            <div class="col-6">
+              <h2>
+                Total Price
+              </h2>
+            </div>
+            <div class="col-6">
+              <h2>
+                $220
+              </h2>
+            </div>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+
+</div>
+<app-footer></app-footer>

@@ -1,0 +1,41 @@
+.container{
+  max-width: 100%;
+  height: 80vh;
+  .heading{
+    padding-top: 0rem;
+    padding-bottom: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-weight: 600;
+    font-size: 24px;
+    text-transform: uppercase;
+  }
+  .avatar{
+    width: 125px;
+    padding: 1rem;
+  }
+  .user{
+    font-weight: 500;
+  }
+  .navButton{
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+  }
+  .items{
+    text-align: left;
+    button{
+      text-align: left;
+    }
+    .material-icons{
+      font-size: 22px;
+      vertical-align: sub;
+      margin-right: 5px;
+    }
+  }
+
+}
+.mat-drawer-container{
+  height: 100%;
+  text-align: center;
+}

@@ -11,21 +11,26 @@
           <h1 class="title">LOG IN</h1>
           <h2 class="subtitle">Welcome back! Get access to your Orders,Wishlist and posts!</h2>
 
-          <form [formGroup]="options">
+          <form [formGroup]="options" (ngSubmit)="onSubmitModelBased()">
 
             <mat-form-field appearance="fill"
                 [hideRequiredMarker]="true"
                 [floatLabel]="true">
+                <span matPrefix class="material-icons">email</span>
                 <mat-label>E Mail ID</mat-label>
               <input matInput [formControl]="email" placeholder="Enter your E mail ID" required>
             </mat-form-field>
 
             <mat-form-field appearance="fill" [floatLabel]="true">
+              <span matPrefix class="material-icons">vpn_key</span>
               <mat-label>Password</mat-label>
-              <input matInput [formControl]="password" placeholder="Enter your password">
+              <input matInput [formControl]="password" placeholder="Enter your password" [type]="hidePassword ? 'password' : 'text'">
+              <button mat-icon-button matSuffix (click)="hidePassword = !hidePassword" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hidePassword">
+                <mat-icon>{{hidePassword ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
             </mat-form-field>
 
-            <button mat-raised-button class="btn" color="primary">LOG IN</button>
+            <button type="submit" mat-raised-button class="btn" color="primary">LOG IN</button>
             <div class="or">
               OR?
             </div>

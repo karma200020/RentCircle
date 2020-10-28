@@ -1,50 +1,66 @@
 <app-navbar></app-navbar>
-<div class="container p-2">
-  <mat-card class="login-card">
-    <div class="row">
-      <div class="col-md-6 col-lg-6 col-xl-6 img">
-        <img mat-card-image src="../../../assets/images/backgrounds/login.jpg" alt="login background photo">
+<div class="bg">
+  <div class="container p-2">
+    <mat-card class="login-card">
+      <div class="row">
+        <div class="col-md-6 col-lg-6 col-xl-6 img">
+          <img mat-card-image src="../../../assets/images/backgrounds/login.jpg" alt="login background photo">
+        </div>
+        <div class="col-md-6 col-lg-6 col-xl-6 col-12 content">
+
+          <h1 class="title">SIGN UP</h1>
+          <h2 class="subtitle">Welcome to Rent Circle! Sign up to get started !</h2>
+
+          <form [formGroup]="options" (submit)="onSubmitModelBased()">
+
+            <mat-form-field class="full" appearance="fill"
+                [hideRequiredMarker]="true"
+                [floatLabel]="true">
+                <span matPrefix class="material-icons">email</span>
+                <mat-label>E Mail ID</mat-label>
+              <input matInput [formControl]="email" placeholder="Enter your E mail ID" required>
+            </mat-form-field>
+
+
+            <mat-form-field class="half l" appearance="fill" [floatLabel]="true">
+              <span matPrefix class="material-icons">person</span>
+              <mat-label>First Name</mat-label>
+              <input matInput [formControl]="fname"  placeholder="Enter your password">
+            </mat-form-field>
+
+            <mat-form-field class="half r" appearance="fill" [floatLabel]="true">
+              <span matPrefix class="material-icons">person</span>
+              <mat-label>Last Name</mat-label>
+              <input matInput [formControl]="lname"  placeholder="Enter your password">
+            </mat-form-field>
+            <mat-form-field class="full" appearance="fill" [floatLabel]="true">
+              <span matPrefix class="material-icons">vpn_key</span>
+              <mat-label>Password</mat-label>
+              <input matInput [formControl]="password"  placeholder="Enter your password"  [type]="hidePassword1 ? 'password' : 'text'">
+              <button mat-icon-button matSuffix (click)="hidePassword1 = !hidePassword1" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hidePassword1">
+                <mat-icon>{{hidePassword1 ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+            </mat-form-field>
+            <mat-form-field class="full" appearance="fill" [floatLabel]="true">
+              <span matPrefix class="material-icons">vpn_key</span>
+              <mat-label>Re-enter Password</mat-label>
+              <input matInput [formControl]="rpassword" placeholder="Enter your password"  [type]="hidePassword2 ? 'password' : 'text'">
+              <button mat-icon-button matSuffix (click)="hidePassword2 = !hidePassword2" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hidePassword2">
+                <mat-icon>{{hidePassword2 ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+            </mat-form-field>
+            <button mat-raised-button class="btn" type="submit" color="primary">SIGN UP</button>
+            <div class="or">
+              OR?
+            </div>
+            <button mat-raised-button class="btn" routerLink='/auth/login'>Already registered? SIGN IN</button>
+          </form>
+        </div>
       </div>
-      <div class="col-md-6 col-lg-6 col-xl-6 col-12 content">
 
-        <h1 class="title">SIGN UP</h1>
-        <h2 class="subtitle">Welcome to Rent Circle! Sign up to get started !</h2>
-
-        <form [formGroup]="options">
-
-          <mat-form-field class="full" appearance="fill"
-              [hideRequiredMarker]="true"
-              [floatLabel]="true">
-              <mat-label>E Mail ID</mat-label>
-            <input matInput [formControl]="email" placeholder="Enter your E mail ID" required>
-          </mat-form-field>
-          <mat-form-field class="full" appearance="fill" [floatLabel]="true">
-            <mat-label>Password</mat-label>
-            <input matInput [formControl]="password"  placeholder="Enter your password">
-          </mat-form-field>
-          <mat-form-field class="half l" appearance="fill" [floatLabel]="true">
-            <mat-label>First Name</mat-label>
-            <input matInput [formControl]="fname"  placeholder="Enter your password">
-          </mat-form-field>
-
-          <mat-form-field class="half r" appearance="fill" [floatLabel]="true">
-            <mat-label>Last Name</mat-label>
-            <input matInput [formControl]="lname"  placeholder="Enter your password">
-          </mat-form-field>
-          <mat-form-field class="full" appearance="fill" [floatLabel]="true">
-            <mat-label>Re-enter Password</mat-label>
-            <input matInput [formControl]="rpassword" placeholder="Enter your password">
-          </mat-form-field>
-          <button mat-raised-button class="btn" color="primary">LOG IN</button>
-          <div class="or">
-            OR?
-          </div>
-          <button mat-raised-button class="btn" routerLink='/auth/login'>Already registered? SIGN UP</button>
-        </form>
-      </div>
-    </div>
-
-  </mat-card>
+    </mat-card>
+  </div>
 </div>
+
 <app-footer></app-footer>
 

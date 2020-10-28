@@ -1,0 +1,30 @@
+<div class="container">
+
+  <mat-card *ngFor="let item of items">
+    <div class="row">
+      <div class="col-2">
+        <img class="img" src="./../../../assets/images/category/tools.jpg" alt="">
+      </div>
+      <div class="col-2">
+        <h3>Power tool</h3>
+          <div class="rating">
+           <ng-template #t let-fill="fill">
+              <span class="star" [class.full]="fill === 100">
+                <span class="half" [style.width.%]="fill">&#9733;</span>&#9733;
+              </span>
+            </ng-template>
+            <ngb-rating [(rate)]="currentRate" [starTemplate]="t" [max]="5"></ngb-rating>
+          </div>
+        </div>
+        <div class="col-4">
+          <h3>Expected Delivery by 1 Nov 2020</h3>
+          <h4><span class="material-icons status">stop_circle</span>Order has been placed</h4>
+        </div>
+        <div class="col-4">
+          <h3>$2000 <span class="mrp">$2300</span></h3>
+          <h4>Savings : $300</h4>
+        </div>
+
+    </div>
+  </mat-card>
+</div>

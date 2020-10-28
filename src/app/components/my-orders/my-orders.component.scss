@@ -1,0 +1,42 @@
+.container{
+  max-width: 90%;
+  margin-left: 0;
+
+  .img{
+    width: 100%;
+  }
+  mat-card{
+    margin-bottom: 1rem;
+  }
+
+  .mrp{
+    text-decoration: line-through;
+    color: darkgray;
+    font-size: smaller;
+  }
+
+  .rating{
+    .star {
+      position: relative;
+      display: inline-block;
+      font-size: 2rem;
+      color: #d3d3d3;
+    }
+    .full {
+      color: #ffd740;
+    }
+    .half {
+      position: absolute;
+      display: inline-block;
+      overflow: hidden;
+      color: #ffd740;
+    }
+
+  }
+  .status{
+    color: lawngreen;
+    font-size: 15px;
+    vertical-align: middle;
+    margin-right: 6px;
+  }
+}

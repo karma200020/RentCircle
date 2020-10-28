@@ -27,7 +27,7 @@
             <mat-form-field appearance="outline" color="secondary" class="opaque-form-field">
               <input type="text"
                      matInput
-                     placeholder="Search property"
+                     placeholder="What are you looking for ?"
                      formControlName="stateGroup"
                      required
                      [(ngModel)]="item"
@@ -48,13 +48,13 @@
         </div>
 
       <div>
-      <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" (click)="toggleSubMenu()">
         <mat-icon>menu</mat-icon>
       </button>
     </div>
     </mat-toolbar-row>
 
-    <mat-toolbar-row style="justify-content: space-between;">
+    <mat-toolbar-row *ngIf="showSubMenu" style="justify-content: space-between;">
       <span><span class="material-icons loc">
         my_location
         </span>Find your location</span>
@@ -73,21 +73,35 @@
             <button mat-menu-item>Weilding & Soldering tools</button>
             <button mat-menu-item>Safety Equipment</button>
           </mat-menu>
-          <button mat-flat-button routerLink='auth/login' class="navButton" ><span class="material-icons bIcon">
+          <button mat-flat-button routerLink='/auth/login' class="navButton" ><span class="material-icons bIcon">
             person
             </span>Log In</button>
-            <button mat-flat-button class="navButton" ><span class="material-icons bIcon">
+            <button mat-flat-button class="navButton" routerLink='/cart' ><span class="material-icons bIcon">
               shopping_cart
               </span>My Cart</button>
         </div>
 
       <div>
-      <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <button routerLink='/wishlist' mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
         <mat-icon>favorite</mat-icon>
       </button>
-      <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+      <button mat-icon-button [matMenuTriggerFor]="social" aria-label="social share">
         <mat-icon>share</mat-icon>
       </button>
+      <mat-menu #social="matMenu">
+        <button mat-menu-item>
+          <mat-icon>dialpad</mat-icon>
+          <span>Facebook</span>
+        </button>
+        <button mat-menu-item disabled>
+          <mat-icon>voicemail</mat-icon>
+          <span>Twitter</span>
+        </button>
+        <button mat-menu-item>
+          <mat-icon>notifications_off</mat-icon>
+          <span>Whatsapp</span>
+        </button>
+      </mat-menu>
     </div>
     </mat-toolbar-row>
   </mat-toolbar>

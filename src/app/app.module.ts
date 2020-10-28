@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ChatModule } from '@progress/kendo-angular-conversational-ui';
 import { MatInputModule } from '@angular/material/input';
+import { HttpClientModule } from '@angular/common/http';
+import { CookieModule } from 'ngx-cookie';
 
 
 
@@ -22,7 +24,9 @@ import { MatInputModule } from '@angular/material/input';
     BrowserAnimationsModule,
     AppRoutingModule,
     ChatModule,
-    MatInputModule
+    MatInputModule,
+    HttpClientModule,
+    CookieModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]

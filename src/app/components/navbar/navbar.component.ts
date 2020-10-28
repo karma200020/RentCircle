@@ -24,15 +24,18 @@ export const _filter = (opt: string[], value: string): string[] => {
 })
 export class NavbarComponent implements OnInit {
 
-  item:string;
-  selectedValue: string;
-  // tslint:disable-next-line: variable-name
   constructor(private _formBuilder: FormBuilder,
               private router: Router) { }
 
   stateForm: FormGroup = this._formBuilder.group({
-    stateGroup: '',
+  stateGroup: '',
   });
+
+  item: string;
+  selectedValue: string;
+  showSubMenu = true;
+  // tslint:disable-next-line: variable-name
+
 
 
   stateGroups: StateGroup[] = [{
@@ -116,15 +119,21 @@ export class NavbarComponent implements OnInit {
   }
 
   search(){
-    if(!this.selectedValue){
+    if (!this.selectedValue){
 
     this.router.navigate(['search', {item: this.item}]);
     }
     else{
-      console.log(this.selectedValue)
-      this.router.navigate(['search', {item: this.item,category: this.selectedValue}]);
+      console.log(this.selectedValue);
+      this.router.navigate(['search', {item: this.item, category: this.selectedValue}]);
     }
   }
+
+  categorySearch(category){
+    this.selectedValue = category;
+    this.search();
+  }
+
 
   private _filterGroup(value: string): StateGroup[] {
     if (value) {
@@ -134,6 +143,12 @@ export class NavbarComponent implements OnInit {
     }
 
     return this.stateGroups;
+  }
+
+  // toggle sub menu
+
+  toggleSubMenu(): void{
+    this.showSubMenu = !this.showSubMenu;
   }
 
 
