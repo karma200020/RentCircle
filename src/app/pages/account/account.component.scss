@@ -1,6 +1,10 @@
 .container{
   max-width: 100%;
   height: 80vh;
+
+  .side{
+    width: 300px;
+  }
   .heading{
     padding-top: 0rem;
     padding-bottom: 2rem;
@@ -20,7 +24,8 @@
   .navButton{
     width: 100%;
     padding: 10px;
-    font-size: 18px;
+    font-size: 16px;
+    color: #9274c8;
   }
   .items{
     text-align: left;
@@ -29,7 +34,7 @@
     }
     .material-icons{
       font-size: 22px;
-      vertical-align: sub;
+      vertical-align: text-top;
       margin-right: 5px;
     }
   }

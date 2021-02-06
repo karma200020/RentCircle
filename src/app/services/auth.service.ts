@@ -35,6 +35,9 @@ export class AuthService {
         this.loginResObj = res;
         localStorage.setItem('access_token', this.loginResObj.body.access_token);
         localStorage.setItem('refresh_token', this.loginResObj.body.refresh_token);
+        localStorage.setItem('name', this.loginResObj.body.user.first_name + ' ' + this.loginResObj.body.user.last_name);
+        localStorage.setItem('username', this.loginResObj.body.user.username);
+        localStorage.setItem('userpk', this.loginResObj.body.user.pk);
         this.router.navigate(['/account/order']);
         this.loginLoad = false;
 
@@ -62,6 +65,8 @@ export class AuthService {
         this.router.navigate(['/account/order']);
         localStorage.setItem('access_token', this.loginResObj.access_token);
         localStorage.setItem('refresh_token', this.loginResObj.refresh_token);
+        console.log(this.loginResObj.user.first_name);
+        localStorage.setItem('name', this.loginResObj.user.first_name + ' ' + this.loginResObj.user.last_name);
         this.signUpLoad = false;
       },
       (err) => {

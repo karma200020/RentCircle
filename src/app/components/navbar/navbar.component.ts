@@ -31,7 +31,7 @@ export class NavbarComponent implements OnInit {
   stateGroup: '',
   });
 
-  item: string;
+  item: string = '';
   selectedValue: string;
   showSubMenu = true;
   // tslint:disable-next-line: variable-name
@@ -119,7 +119,11 @@ export class NavbarComponent implements OnInit {
   }
 
   search(){
-    if (!this.selectedValue){
+    if (!this.selectedValue && this.item == ''){
+      console.log("====================aaaaaaaaaaaaaaaaaaaaaa===================")
+      this.router.navigate(['search']);
+      }
+    else if (!this.selectedValue){
 
     this.router.navigate(['search', {item: this.item}]);
     }

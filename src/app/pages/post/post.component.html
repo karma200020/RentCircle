@@ -1,0 +1,67 @@
+<app-navbar></app-navbar>
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <div class="coverText">
+                FIND THE RIGHT RENTERS WITH EASE
+            </div>
+            <img src="./../../../assets/images/backgrounds/post.jpg" alt="" class="sideImg" srcset="">
+        </div>
+        <form [formGroup]="postForm" class="col-6 row" (ngSubmit)="postAd()" >
+            <h1 class="title">Post Your Advertisment</h1>
+            <div class="col-12">
+                <mat-form-field appearance="outline">
+                    <mat-label>Item name</mat-label>
+                    <input formControlName="item" matInput placeholder="Enter the name of the item" required>
+                </mat-form-field>
+            </div>
+            <div class="col-12">
+                <mat-form-field appearance="outline">
+                    <mat-label>description</mat-label>
+                    <textarea formControlName="description" matInput placeholder="Enter the description" required></textarea>
+                </mat-form-field>
+            </div>
+            <div class="col-6">
+                <mat-form-field appearance="outline">
+                    <mat-label>Item Count</mat-label>
+                    <input formControlName="item_count" type="number" matInput placeholder="Quantity of item available" required>
+                </mat-form-field>
+            </div>
+            <div class="col-6">
+                <mat-form-field appearance="outline">
+                    <mat-label>Category</mat-label>
+                    <mat-select formControlName="category" required>
+                        <mat-option value="a">a</mat-option>
+                        <mat-option value="b">b</mat-option>
+                        <mat-option value="c">c</mat-option>
+                   </mat-select>
+                </mat-form-field>
+            </div>
+
+            <div class="col-6">
+                <mat-form-field appearance="outline">
+                    <mat-label>Price</mat-label>
+                    <input formControlName="cost" matInput type="number" placeholder="Select the price" required>
+                </mat-form-field>
+            </div>
+            
+            <div class="col-6">
+                <mat-form-field appearance="outline" >
+                    <mat-label>Contact Number</mat-label>
+                    <input formControlName="contact_number" type="number" matInput placeholder="Enter your contact number" required>
+                </mat-form-field>
+            </div>
+            <div class="col-12">
+                <mat-form-field appearance="outline">
+                    <mat-label>Contact Email</mat-label>
+                    <input formControlName="contact_email" matInput type="email" placeholder="Enter your contact email" required>
+                </mat-form-field>
+            </div>
+            <div class="col-12">
+                <button mat-raised-button color="primary" class="but">POST AD</button>
+            </div>
+            
+        </form>
+    </div>
+</div>
+<app-footer></app-footer>

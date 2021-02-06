@@ -2,28 +2,28 @@
   <app-navbar></app-navbar>
   <div class="container">
     <mat-drawer-container class="drawer" class="example-container" [hasBackdrop]="false">
-      <mat-drawer #drawer [opened]='true' [mode]="'push'">
+      <mat-drawer #drawer [opened]='true' [mode]="'side'" class="side">
         <img src="assets/icons/avatar.png" class="avatar" alt="">
         <h3 class="user">Abhishek Mishra</h3>
         <h2 class="heading">My Account</h2>
       <div class="items">
-        <mat-divider></mat-divider>
+
         <button mat-button class="navButton" color="primary" routerLink='order'><span class="material-icons">
           shopping_basket
           </span>My Orders</button>
-        <mat-divider></mat-divider>
+        
         <button mat-button class="navButton" color="primary" routerLink='profile'><span class="material-icons">
           account_circle
           </span>Profile Information</button>
-        <mat-divider></mat-divider>
+
         <button mat-button class="navButton" color="primary" routerLink='address'><span class="material-icons">
           where_to_vote
           </span>Manage Address</button>
-        <mat-divider></mat-divider>
+
         <button mat-button class="navButton" color="primary" routerLink='feedback'><span class="material-icons">
           rate_review
           </span>Ratings and Reviews</button>
-        <mat-divider></mat-divider>
+
         <button mat-button class="navButton" color="primary"><span class="material-icons">
           power_settings_new
           </span>LOG OUT</button>

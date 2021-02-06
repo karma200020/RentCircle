@@ -8,6 +8,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDividerModule } from '@angular/material/divider';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { MatIconModule } from '@angular/material/icon';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     MatButtonModule,
     MatDividerModule,
     NgbModule,
+    MatIconModule
   ]
 })
 export class CartModule { }

@@ -59,26 +59,32 @@
         my_location
         </span>Find your location</span>
         <div class="buttonList">
-          <button mat-flat-button class="navButton" >Explore</button>
-          <button mat-flat-button class="navButton" >Post Ad</button>
-          <button mat-flat-button class="navButton"  mat-button [matMenuTriggerFor]="menu2">Domestic Tools</button>
+          <button mat-flat-button (click)="categorySearch('')" class="navButton" >Explore</button>
+          <button mat-flat-button class="navButton" routerLink='/post' >Post Ad</button>
+          <button mat-flat-button class="navButton" mat-button [matMenuTriggerFor]="menu2">Domestic Tools</button>
           <mat-menu #menu2="matMenu">
-            <button mat-menu-item>Air Compressors,Tools & Accessories</button>
-            <button mat-menu-item>Automative</button>
-            <button mat-menu-item>Hand Tools</button>
+            <button mat-menu-item (click)="categorySearch('Air Compressors,Tools & Accessories')" >Air Compressors,Tools & Accessories</button>
+            <button mat-menu-item (click)="categorySearch('Automative')">Automative</button>
+            <button mat-menu-item (click)="categorySearch('Hand Tools')">Hand Tools</button>
           </mat-menu>
 
           <button mat-flat-button class="navButton"  mat-button [matMenuTriggerFor]="menu">Tools and Equipments</button>
           <mat-menu #menu="matMenu">
-            <button mat-menu-item>Weilding & Soldering tools</button>
-            <button mat-menu-item>Safety Equipment</button>
+            <button mat-menu-item (click)="categorySearch('Weilding & Soldering tools')">Weilding & Soldering tools</button>
+            <button mat-menu-item (click)="categorySearch('Safety Equipment')">Safety Equipment</button>
           </mat-menu>
           <button mat-flat-button routerLink='/auth/login' class="navButton" ><span class="material-icons bIcon">
             person
-            </span>Log In</button>
+            </span>Log In
+          </button>
             <button mat-flat-button class="navButton" routerLink='/cart' ><span class="material-icons bIcon">
               shopping_cart
-              </span>My Cart</button>
+              </span>My Cart
+            </button>
+            <button mat-flat-button class="navButton" routerLink='/cart' ><span class="material-icons bIcon">
+              all_inbox
+              </span>My Items
+            </button>
         </div>
 
       <div>

@@ -4,11 +4,11 @@
   <div class="container summary">
     <div class="row">
       <div class="col-2 text price">
-        $20,000
+        ${{item.cost}}
       </div>
       <div class="col-5 text">
         <div class="title">
-          4 BHK RESIDENTIAL HOUSE
+          {{item.item}}
         </div>
         <div class="sub">
           For Rent in Mehrauli
@@ -20,7 +20,7 @@
             <div class="col-7">
             <mat-card-header>
                 <div mat-card-avatar class="example-header-image"></div>
-                <mat-card-title>TANYA SETH</mat-card-title>
+                <mat-card-title>{{poster.first_name}} {{poster.last_name}}</mat-card-title>
                 <mat-card-subtitle>OWNER</mat-card-subtitle>
               </mat-card-header>
               </div>
@@ -94,11 +94,11 @@
                 </div>
             </div>
             <div class="col-7 content">
-              <div class="navigate">
-                Rent > flats > 4 bhk
+              <div *ngIf="dataLoaded | async" class="navigate">
+                Rent > {{item.category }} > 4 bhk
               </div>
               <div class="heading">
-                4 bhk 26 Sq. ft Residential Apartments for Rent in barnala road,Sirsa
+                {{item.item}}
               </div>
               <div class="located">
                 Apartment in <a href="google.com">FRIENDS COLONY</a>, NEW DELHI
@@ -112,13 +112,13 @@
               <ngb-rating [(rate)]="currentRate" [starTemplate]="t" [readonly]="true" [max]="5"></ngb-rating><span class="verifyTag"><span class="material-icons verify">check_circle</span> RentCircle Verified Users </span>
               </div>
               <div class="price">
-                $20,000
+                ${{item.cost}}
               </div>
               <div class="desc">
                 <h2>
                   Quick Description
                 </h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis reprehenderit minus consequatur ipsum illum minima commodi laborum recusandae mollitia repudiandae sit quisquam consequuntur esse quae rerum, laboriosam tenetur eum eos.</p>
+                <p>{{item.description}}</p>
               </div>
               <div class="row table">
                 <div class="col-6">

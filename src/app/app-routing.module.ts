@@ -18,6 +18,9 @@ const routes: Routes = [
     path: 'chatBot',
     loadChildren: () => import('./components/chat-bot/chat-bot.module').then(m => m.ChatBotModule)
   },
+  { path: 'productDetail/:id',
+    loadChildren: () => import('./pages/product-detail/product-detail.module').then(m => m.ProductDetailModule)
+  },
   { path: 'productDetail',
     loadChildren: () => import('./pages/product-detail/product-detail.module').then(m => m.ProductDetailModule)
   },
@@ -39,8 +42,16 @@ const routes: Routes = [
   },
   {
      path: 'cart',
-     loadChildren: () => import('./pages/cart/cart.module').then(m => m.CartModule) },
-  { path: 'wishlist', loadChildren: () => import('./pages/wishlist/wishlist.module').then(m => m.WishlistModule) },
+     loadChildren: () => import('./pages/cart/cart.module').then(m => m.CartModule) 
+  },
+  { 
+    path: 'wishlist', 
+    loadChildren: () => import('./pages/wishlist/wishlist.module').then(m => m.WishlistModule) 
+  },
+  { 
+    path: 'post', 
+    loadChildren: () => import('./pages/post/post.module').then(m => m.PostModule) 
+  },
 ];
 
 @NgModule({

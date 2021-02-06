@@ -1,7 +1,9 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
+import { ActivatedRoute } from '@angular/router';
 import { NgbNav } from '@ng-bootstrap/ng-bootstrap';
+import { PostServiceService } from 'src/app/services/post-service.service';
 
 @Component({
   selector: 'app-product-detail',
@@ -15,6 +17,9 @@ export class ProductDetailComponent implements OnInit {
     delivery: ['', Validators.required]
 });;
   currentRate = 3.14;
+  item;
+  poster;
+  dataLoaded: Promise<boolean>;
 
 
 
@@ -46,9 +51,31 @@ export class ProductDetailComponent implements OnInit {
     ]
   }
 
-  constructor(public dialog: MatDialog,private builder: FormBuilder) { }
+  constructor(
+              public dialog: MatDialog,
+              private builder: FormBuilder,
+              public route: ActivatedRoute,
+              public posts: PostServiceService,
+              ) { }
 
   ngOnInit(): void {
+
+    this.dataLoaded = Promise.resolve(false); 
+
+    this.route.queryParams.subscribe(params => {
+      this.posts.getItem(params['id']).subscribe(
+        x => {
+          console.log(x.body[0]);
+          this.item = x.body[0];
+          this.poster = x.body[0].owner;
+          this.dataLoaded = Promise.resolve(true); 
+          this.currentRate = x.body[0].rating
+        },
+        err => console.log(err)
+      )
+      console.log(this.posts.getItem(params['id']));
+    
+    });
   }
 
   goToSlide(slide) {
