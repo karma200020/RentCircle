@@ -1,5 +1,9 @@
 # RentCircle
 
+Backend for the project is developed using Django and can be found at -
+
+https://github.com/karma200020/RentCircleBackend
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.3.
 
 ## Development server
